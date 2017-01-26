@@ -7,3 +7,4 @@ pillar_roots:
   base:
     - /srv/pillar
 grains:
+  role: cosmos
