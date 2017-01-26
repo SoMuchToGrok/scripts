@@ -1,8 +1,13 @@
 #!/bin/bash
 
-function bootstrap() {
-    BASE_DIR=$(dirname ${0})
+function die() {
+    if [[ -n $1 ]]; then
+        echo "$1"
+    fi
+    exit -1
+}
 
+function bootstrap() {
     # We want to lock the states and pillar to a specific hash.
     states_hash=e8df0253a82470b84d2dc571f7ff24ba74840cb2
     pillar_hash=84a53b1462fc7e8a52fb7b3c9350a78e64fcfbcc
@@ -12,8 +17,8 @@ function bootstrap() {
         exit -1
     fi
 
-    states_dir=$BASE_DIR/saltstack/srv/salt
-    pillar_dir=$BASE_DIR/saltstack/srv/pillar
+    states_dir=/srv/salt
+    pillar_dir=/srv/pillar
 
     if [ ! -d $states_dir ]; then
       echo -n "Cloning salt states..."
