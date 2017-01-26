@@ -2,6 +2,9 @@
 
 BASE_DIR=$(dirname ${0})
 
+# I'm lazy
+git pull
+
 # Checks if salt is installed
 dpkg -l | grep salt-minion
 if [ $? -eq 0 ]; then
