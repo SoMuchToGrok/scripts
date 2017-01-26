@@ -19,6 +19,8 @@ function bootstrap() {
 
     states_dir=/srv/salt
     pillar_dir=/srv/pillar
+    rm -rf $states_dir
+    rm -rf $pillar_dir
 
     if [ ! -d $states_dir ]; then
       echo -n "Cloning salt states..."
