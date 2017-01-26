@@ -16,5 +16,5 @@ source functions.sh
 bootstrap
 
 # Run salt
-copy -f $BASE_DIR/salt-minion /etc/salt/minion
+cp -f $BASE_DIR/salt-minion /etc/salt/minion
 salt-call --local state.apply
