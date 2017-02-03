@@ -20,4 +20,4 @@ bootstrap
 
 # Run salt
 cp -f $BASE_DIR/salt-minion /etc/salt/minion
-salt-call --local state.apply
+salt-call --local state.apply -l info
