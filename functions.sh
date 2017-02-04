@@ -9,7 +9,7 @@ function die() {
 
 function bootstrap() {
     # Lock the states and pillar to a specific hash
-    states_hash=15d408ec41a3e241cac2829dbee5745991483767
+    states_hash=0c207da78be9c678e84e5fc96d72fb06d86c99d1
     pillar_hash=84a53b1462fc7e8a52fb7b3c9350a78e64fcfbcc
 
     if [[ -z $states_hash ]] || [[ -z $pillar_hash ]]; then
